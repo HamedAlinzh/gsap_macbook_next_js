@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
+import { useRef } from "react"
 
 const Hero = () => {
-    // const videoRef = useRef();
-    // useEffect(() => {
-    //     if(videoRef.current) videoRef.current.playbackRate = 2;
-    // }, []);
+    const videoRef = useRef();
+
+    useEffect(() => {
+        if(videoRef.current) videoRef.current.playbackRate = 2;
+    }, []);
 
     return (
         <section id="hero">
@@ -13,7 +15,7 @@ const Hero = () => {
                 <img src="/title.png" alt="MacBook Title" />
             </div>
 
-            <video src="/video/hero.mp4" autoPlay muted playsInline />
+            <video src="/videos/hero.mp4" autoPlay muted playsInline />
 
             <button>Buy</button>
             <p>From 200mil or 25mil/mo. for 12 months</p>
